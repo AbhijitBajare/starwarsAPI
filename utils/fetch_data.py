@@ -3,7 +3,7 @@ uses HTTP GET request to fetch any resource data from a given URL endpoint
 """
 import logging
 import requests
-from typing import List, Dict, Union
+from typing import List, Dict, Union, Optional
 from requests import Response
 
 
@@ -29,7 +29,8 @@ def mylogger(func):
 
 
 @mylogger
-def hit_url(url: str) -> Response:
+def hit_url(url: str) -> Optional[Response]:
+    """hits the API endpoint and returns response if successful"""
 
     response = requests.get(url)
     if response.status_code != 200:
@@ -47,3 +48,4 @@ def fetch_data(urls: List) -> Union[List, Dict]:
         data.append(res.json())
 
     return data
+

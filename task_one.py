@@ -2,16 +2,11 @@
 ----------------------
 PROBLEM STATEMENT
 ----------------------
-
-
 The Star Wars API lists 82 main characters in the Star Wars saga.
-
 For the first task, we would like you to use a random number generator
 that picks a number between 1-82.
-
 Using these random numbers you will be pulling 15 characters
 from the API using Python.
-
 """
 
 import random
@@ -48,12 +43,9 @@ def generate_random_numbers(n: int = 15) -> List[int]:
 
 def get_url(resource_id: int, resource: str) -> str:
     """
-
     Args:
         resource_id:
-
     Returns:
-
     """
 
     home_url = "https://swapi.dev"
